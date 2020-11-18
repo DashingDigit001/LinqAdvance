@@ -131,3 +131,90 @@ private static void Sample_OrderByDescending_Lambda()
                 Console.WriteLine(name);
         }
 ```
+
+- Select  
+  依照你的條件指定陣列中的元素 
+
+  ```C#
+    private class Person
+          {
+              public string Name { get; set; }
+              public int Age { get; set; }
+          }
+    private static void Sample_Select_Lambda_Objects()
+          {
+              Person[] persons = {
+          new Person { Name = "Mike", Age = 25 },
+          new Person { Name = "Joe", Age = 43 },
+          new Person { Name = "Nadia", Age = 31 }
+      	};
+  
+              var result = persons.Select(p => p.Name);
+  
+              Console.WriteLine("只要顯示person Name");
+              foreach (string person in result)
+                  Console.WriteLine(String.Format("My name is {0}", person));
+          }
+  ```
+
+- Where  
+  依照你的條件篩選陣列中的元素 
+
+  ``` c#
+   private class Person
+          {
+              public string Name { get; set; }
+              public int Age { get; set; }
+          } 
+   private static void Sample_Where_Lambda_Objects()
+          {
+              Person[] persons = {
+          new Person { Name = "Mike", Age = 25 },
+          new Person { Name = "Joe", Age = 43 },
+          new Person { Name = "Nadia", Age = 31 }
+          };
+  
+              var result = persons.Where(p => p.Age >= 31);
+  
+              Console.WriteLine("Finding persons who are 30 years old or older:");
+              foreach (Person person in result)
+                  Console.WriteLine(String.Format("{0}: {1} years old", person.Name, person.Age));
+          }
+  ```
+
+- FirstOrDefault  
+  取出陣列中第一個值
+
+```c#
+  private static void Sample_FirstOrDefault_Lambda()
+        {
+            string[] countries = { "Denmark", "Sweden", "Norway" };
+            string[] empty = { };
+
+            var result = countries.FirstOrDefault();
+
+            var resultEmpty = empty.FirstOrDefault();
+
+            Console.WriteLine("First element in the countries array contains:");
+            Console.WriteLine(result);
+
+            Console.WriteLine("First element in the empty array does not exist:");
+      		Console.WriteLine(resultEmpty == null);
+  		}
+```
+
+- ToList  
+  將陣列轉成List
+
+```C#
+private static void Sample_ToList_Lambda()
+        {
+            string[] names = { "Brenda", "Carl", "Finn" };
+
+            List<string> result = names.ToList();
+
+            Console.WriteLine(String.Format("names is of type: {0}", names.GetType().Name));
+            Console.WriteLine(String.Format("result is of type: {0}", result.GetType().Name));
+        }
+```
+
