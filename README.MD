@@ -24,6 +24,7 @@ Linq語法教學
 # 使用範例
 
 -   Take
+想從陣列中取得多少物件
 
 ```C#
     private static void Sample_Take_Lambda()
@@ -39,6 +40,7 @@ Linq語法教學
 ```
 
 -   TakeWhile
+想從陣列中取得特定條件下的物件
 
 ```C#
       private static void Sample_TakeWhile_Lambda()
@@ -54,6 +56,7 @@ Linq語法教學
 ```
 
 -   Skip
+想從陣列中跳過多少物件
 
 ```c#
         private static void Sample_Skip_Lambda()
@@ -69,7 +72,7 @@ Linq語法教學
 ```
 
 -   SkipWhile
-
+想從陣列中跳過特定條件下的物件
 ```c#
      private static void Sample_SkipWhile_Lambda()
         {
@@ -84,7 +87,7 @@ Linq語法教學
 ```
 
 -   Join
-
+如何將兩個Table(或陣列)合併處理
 ```c#
    private static void Sample_Join_Lambda()
         {
@@ -100,7 +103,7 @@ Linq語法教學
 ```
 
 -   OrderBy
-
+決定陣列中物件的(升序)
 ```c#
 private static void Sample_OrderBy_Lambda_Numbers()
         {
@@ -115,7 +118,7 @@ private static void Sample_OrderBy_Lambda_Numbers()
 ```
 
 -   OrderByDescending
-
+決定陣列中物件的(降序)
 ```c#
 private static void Sample_OrderByDescending_Lambda()
         {
